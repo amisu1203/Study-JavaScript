@@ -83,4 +83,53 @@ function factorial (n) {
     if (n <= 1) return 1;
     return n * factorial(n-1);
 }
-factorial(3);
+console.log(factorial(0)); // 1
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
+
+// 예제 12-46 : 함수를 가리키는 식별자로 재귀 호출
+var factorial = function foo(n) {
+    if (n < 1) return 1;
+    return n * foo(n-1);
+}
+console.log(factorial(5));
+
+// 예제 12-47 : while 문으로 구현한 재귀함수
+function factorial(n) {
+    if (n <= 1) return 1;
+    var res = n;
+    while (--n) res = res * n;
+    return res;
+}
+console.log(factorial(4)); // 24
+console.log(factorial(3)); // 6
+
+
+// (7-3) 중첩 함수
+function outer() {
+    var x = 1;
+    // nested / inner function
+    function inner() {
+        var y = 2;
+        // 외부 함수의 변수를 참조할 수 있다.
+        console.log(x + y); // 3
+    }
+    inner();
+}
+outer();
+
+
+// (7-4) 콜백 함수
+
+// 예제 12-49 : n만큼 어떤 일을 반복하는 repeat 함수 생성
+function repeat(n) {
+    // i를 출력하게 만든다.
+    for (i = 0; i < n; i++) {
+        console.log(i);
+    }
+}
+repeat(5); // 0 1 2 3 4
+

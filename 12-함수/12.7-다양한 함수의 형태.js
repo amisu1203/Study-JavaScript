@@ -152,5 +152,5 @@ function repeat2(n) {
         }
     }
 }
-repeat2(5); 1 3
+repeat2(5); // 1 3
 

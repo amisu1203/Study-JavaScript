@@ -1,4 +1,4 @@
-// 12.7 다양한 함수의 형태
+ // 12.7 다양한 함수의 형태
 
 // (7-1) 즉시 실행 함수
 
@@ -153,4 +153,28 @@ function repeat2(n) {
     }
 }
 repeat2(5); // 1 3
+
+// (12-50)
+// 외부에서 전달받은 f를 n만큼 반복호출하는 함수
+function repeat3(n, f) {
+    for(var i = 0; i < n; i++) {
+        f(i); // i를 전달하면서 f를 호출
+    }
+}
+
+var logAll = function (i) {
+    console.log(i);
+};
+
+// 반복호출할 함수를 인수로 전달
+repeat3(5, logAll); // 0 1 2 3 4
+
+var logOods = function (i) {
+    if(i % 2) {
+        console.log(i);
+    }
+}
+
+repeat3(5, logOods); // 1 3
+
 

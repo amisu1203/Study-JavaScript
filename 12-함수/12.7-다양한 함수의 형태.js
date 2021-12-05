@@ -78,7 +78,7 @@ function countdown(n) {
 }
 countdown(10);
 
-// 예제 12-45 : 
+// (12-45) : 
 function factorial (n) {
     if (n <= 1) return 1;
     return n * factorial(n-1);
@@ -90,14 +90,14 @@ console.log(factorial(3)); // 6
 console.log(factorial(4)); // 24
 console.log(factorial(5)); // 120
 
-// 예제 12-46 : 함수를 가리키는 식별자로 재귀 호출
+// (12-46) : 함수를 가리키는 식별자로 재귀 호출
 var factorial = function foo(n) {
     if (n < 1) return 1;
     return n * foo(n-1);
 }
 console.log(factorial(5));
 
-// 예제 12-47 : while 문으로 구현한 재귀함수
+// (12-47) : while 문으로 구현한 재귀함수
 function factorial(n) {
     if (n <= 1) return 1;
     var res = n;
@@ -124,7 +124,7 @@ outer();
 
 // (7-4) 콜백 함수
 
-// 예제 12-49 : n만큼 어떤 일을 반복하는 repeat 함수 생성
+// (12-49) : n만큼 어떤 일을 반복하는 repeat 함수 생성
 function repeat(n) {
     // i를 출력하게 만든다.
     for (i = 0; i < n; i++) {
@@ -133,7 +133,7 @@ function repeat(n) {
 }
 repeat(5); // 0 1 2 3 4
 
-// 예제 12-50 
+// (12-50) 
 function repeat1(n) {
     // i를 출력한다.
     for (var i = 0; i < n; i++) {
